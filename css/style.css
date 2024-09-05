@@ -63,3 +63,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
+
+/* Style for used letters */
+.letter-btn.unlit {
+    background-color: #d3d3d3; /* Gray out the button */
+    color: #999; /* Change text color to indicate it's disabled */
+    cursor: not-allowed; /* Change cursor to show it’s disabled */
+}
+
+.spaceman {
+    position: relative; /* Allow it to be moved using 'transform' */
+    transition: transform 0.5s ease; /* Smooth movement when the spaceman moves */
+}

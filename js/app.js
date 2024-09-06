@@ -2,9 +2,16 @@ let wins = 0;
 let losses = 0;
 let gameOver = false;
 
-const hiddenWord ="HELLO";
-let currentWordState = new Array(hiddenWord.length).fill('_');
+const wordList =["SPACE", "ALIEN", "STARS", "ROCKET", "ASTEROID", "GALAXY", "PLANET"];
+let hiddenWord = "";
+let currentWordState = [];
 let wrongGuesses = 0;
+
+function selectRandomWord() {
+    const randomIndex = Math.floor(Math.random() * wordList.length);
+    hiddenWord = wordList[randomIndex];
+    currentWordState = new Array(hiddenWord.length).fill('_');
+}
 
 function displayWord() {
     const wordDisplay = document.getElementById('word-display');
@@ -17,7 +24,6 @@ function displayWord() {
     });
 }
 
-// Function to generate the alphabet and handle interactions
 function generateAlphabet() {
     const alphabetContainer = document.getElementById('alphabet');
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -36,7 +42,6 @@ function generateAlphabet() {
     });
 }
 
-// Function to handle letter click
 function displayMessage(text) {
     document.getElementById('message').textContent = text;
 }
@@ -67,32 +72,46 @@ function handleLetterClick(button) {
         displayMessage('You Win!');
         gameOver = true;
     }
-    if (wrongGuesses >= 6) {
+    else if (wrongGuesses >= 6) {
         losses++;
         updateScore();
-        displayMessage('Game over! The spaceman has been abducted!');
+        displayMessage(`Game over! Buzz was abducted! The word was ${hiddenWord}`);
         gameOver = true;
     }
 
     console.log(`You guessed the letter: ${guessedLetter}`);
 }
 
-// Function to move the spaceman
 function moveSpaceman() {
-    const spaceman = document.querySelector('.spaceman img');
-    spaceman.style.transform = `translateY(${wrongGuesses * -8}px)`; 
+    const spaceman = document.querySelector('.spaceman');
+    if (wrongGuesses >= 6) {
+        displayMessage('Game over! Buzz was abducted!');
+        spaceman.style.visibility = 'hidden';
+        } else { 
+        spaceman.style.transform = `translateY(${wrongGuesses * -60}px)`;
+        spaceman.style.visibility = 'visible';
+
+    }
+}
+function displayMessage(text) {
+    const messageElement = document.getElementById('message');
+    if (text) {
+        messageElement.textContent = text;
+        messageElement.style.display = 'block';
+    } else {
+        messageElement.style.display = 'none';
+    }
 }
 
 function updateScore() {
-document.getElementById('wins').textContent = wins;
-document.getElementById('losses').textContent = losses;
-}
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
+    }
 
-// Function to reset the game for a new round
+
 function resetGame() {
     gameOver = false;
-    currentWordState = new Array(hiddenWord.length).fill('_');
-    
+    selectRandomWord();
     wrongGuesses = 0;
     moveSpaceman();
 
@@ -104,9 +123,13 @@ function resetGame() {
 
     displayWord();
     displayMessage('');
+
+
+    const spaceman = document.querySelector('.spaceman');
+    spaceman.style.visibility = 'visible';
 }
 
 document.getElementById('new-game').addEventListener('click', resetGame);
 
 generateAlphabet();
-displayWord();
+resetGame();

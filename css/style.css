@@ -51,13 +51,13 @@ body {
 
 .background-section {
     background: url(/images/spaceship.png) no-repeat center center;
-    background-size: contain; /* Ensures the entire image fits within the section */
+    background-size: contain; 
     width: 100%; 
-    height: 70vh; /* Takes up 80% of the viewport height */
+    height: 70vh;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Keeps spaceman at the bottom */
+    align-items: flex-end;
     margin: 0 auto;
 }
 

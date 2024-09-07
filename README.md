@@ -4,7 +4,7 @@
 **Spaceman Rescue** is an interactive browser-based game where players must guess letters to reveal a hidden word. Each incorrect guess brings the Spaceman closer to being abducted by a mysterious spaceship. The goal is to guess the word before the Spaceman is fully abducted! I chose this concept because it's a fun twist on the classic "Hangman" game, but with a space-themed adventure that adds visual engagement. The game is designed to be simple, fun, and educational by challenging players' word-guessing abilities.
 
 ## Getting Started
-To play the game, visit the deployed version of **Spaceman Rescue** here: [http://127.0.0.1:5500/index.html].
+To play the game, visit the deployed version of **Spaceman Rescue** here: [https://keviindavis.github.io/spaceman-game/].
 
 ### Instructions:
 1. Start the game by pressing the **New Game** button.
@@ -27,3 +27,5 @@ To play the game, visit the deployed version of **Spaceman Rescue** here: [http:
 - **Sound Effects**: Implement sound effects for key actions like correct/incorrect guesses and when the game ends.
 - **Word Categories**: Add hints or word categories (e.g., "related to space" or "objects") to make the game more educational.
 - **Enhanced Animations**: Improve animations for the Spaceman, particularly during abduction or when winning.
+
+![Wireframe](<images/Wireframe.png>)

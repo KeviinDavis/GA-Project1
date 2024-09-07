@@ -1,25 +1,29 @@
-#GA-Project1/Spaceman Game
+# Spaceman Rescue
 
-A simple browser-based word-guessing game, similar to Hangman, built using HTML, CSS, and JavaScript. 
-The player must guess letters to reveal the hidden word, and each wrong guess brings the Spaceman 
-closer to being abducted by a spaceship!
+## Description
+**Spaceman Rescue** is an interactive browser-based game where players must guess letters to reveal a hidden word. Each incorrect guess brings the Spaceman closer to being abducted by a mysterious spaceship. The goal is to guess the word before the Spaceman is fully abducted! I chose this concept because it's a fun twist on the classic "Hangman" game, but with a space-themed adventure that adds visual engagement. The game is designed to be simple, fun, and educational by challenging players' word-guessing abilities.
 
-## Game Features
+## Getting Started
+To play the game, visit the deployed version of **Spaceman Rescue** here: [http://127.0.0.1:5500/index.html].
 
-- **Word Guessing**: Guess letters to complete the hidden word.
-- **Spaceman Movement**: With each incorrect guess, the Spaceman moves closer to the spaceship.
-- **Win/Loss Conditions**: Win by guessing the word correctly before the Spaceman is abducted.
-    You lose if you run out of spaces!
-- **Dynamic Alphabet**: Letters that are guessed are marked to indicate they've been used.
+### Instructions:
+1. Start the game by pressing the **New Game** button.
+2. Click letters on the screen to guess the hidden word.
+3. Each wrong guess brings the Spaceman closer to the spaceship.
+4. Win by guessing the word before 6 wrong guesses.
+5. Press **New Game** after winning or losing to start a new round.
 
-## How to PlayΩ
-1. Click on the letters of the alphabet to guess the hidden word.
-2. Each wrong guess brings the Spaceman closer to the spaceship.
-3. Try to guess the word before the Spaceman is abducted!
-4. Hit the **New Game** button to reset and play again.
+## Attributions
+- **Images**: Space-themed images used in the game were custom-designed or sourced for free use at cleanpng.com.
+- **JavaScript Libraries**: No external libraries were used in this project, but basic JavaScript functionalities like DOM manipulation and event handling were applied.
 
 ## Technologies Used
+- **HTML**: Structure and layout of the game components.
+- **CSS**: Styling for the game visuals, including positioning, colors, and animations.
+- **JavaScript**: The core logic, including random word selection, event handling, and game progression.
 
-- **HTML**: Structure of the game elements.
-- **CSS**: Styling for the layout and design.
-- **JavaScript**: Game logic, dynamic updates, and interactivity.
+## Next Steps (Future Enhancements)
+- **Difficulty Levels**: Introduce multiple difficulty modes by varying the word lengths.
+- **Sound Effects**: Implement sound effects for key actions like correct/incorrect guesses and when the game ends.
+- **Word Categories**: Add hints or word categories (e.g., "related to space" or "objects") to make the game more educational.
+- **Enhanced Animations**: Improve animations for the Spaceman, particularly during abduction or when winning.
